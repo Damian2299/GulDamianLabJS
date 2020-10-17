@@ -250,6 +250,7 @@
 
 						if (firstAnswer == questions[0][1]) {
 							score++;
+							document.getElementById("firstQuestion").style.color = "green";
 						}
 						else {
 							document.getElementById("firstQuestion").style.color = "red";
@@ -257,6 +258,7 @@
 
 						if (secondAnswer == questions[1][1]) {
 							score++;
+							document.getElementById("secondQuestion").style.color = "green";
 						}
 						else {
 							document.getElementById("secondQuestion").style.color = "red";
@@ -264,12 +266,13 @@
 
 						if (thirdAnswer == questions[2][1]) {
 							score++;
+							document.getElementById("thirdQuestion").style.color = "green";
 						}
 						else {
 							document.getElementById("thirdQuestion").style.color = "red";
 						}
 
-						alert("Twoj wynik: " + score);
+						alert("Wynik z quizu: " + score);
 
 
 
