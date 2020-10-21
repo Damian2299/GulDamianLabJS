@@ -186,28 +186,28 @@
 					document.getElementById("email").innerHTML = "18872@student.pwsz.elblag.pl";
 					document.getElementById("nrindeksu").innerHTML = "18872";
 
-<!--					let numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];-->
-<!--					let x = 0;-->
-<!--					document.getElementById("firstP").innerHTML = "Pierwszy akapit: " + numbers[0];-->
-<!--					document.getElementById("secondP").innerHTML = "Drugi akapit: " + numbers[1];-->
-
-<!--					document.write('<p>Pętla while </p>');-->
-<!--					while(x < numbers.length/2)-->
-<!--					{-->
-<!--						document.write('<p>' + numbers[x] + '</p>');-->
-<!--						x++;-->
-<!--					}-->
-
-<!--					document.write('<p>Pętla for</p>');-->
-<!--					for (let i=0; i<(numbers.length/2); i++)-->
-<!--					{-->
-<!--						document.write('<p>' + numbers[i] + '</p>');-->
-<!--					}-->
+// <!--					let numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];-->
+// <!--					let x = 0;-->
+// <!--					document.getElementById("firstP").innerHTML = "Pierwszy akapit: " + numbers[0];-->
+// <!--					document.getElementById("secondP").innerHTML = "Drugi akapit: " + numbers[1];-->
+//
+// <!--					document.write('<p>Pętla while </p>');-->
+// <!--					while(x < numbers.length/2)-->
+// <!--					{-->
+// <!--						document.write('<p>' + numbers[x] + '</p>');-->
+// <!--						x++;-->
+// <!--					}-->
+//
+// <!--					document.write('<p>Pętla for</p>');-->
+// <!--					for (let i=0; i<(numbers.length/2); i++)-->
+// <!--					{-->
+// <!--						document.write('<p>' + numbers[i] + '</p>');-->
+// <!--					}-->
 
 					function myInfo() {
 						alert("Imię: " + document.getElementById("imie").innerHTML
 							+ "\nNazwisko: " + document.getElementById("nazwisko").innerHTML
-							+ "\nGrupa: " + document.getElementById("nazwisko").innerHTML
+							+ "\nGrupa: " + document.getElementById("grupa").innerHTML
 							+ "\nEmail: " + document.getElementById("email").innerHTML
 							+ "\nNumer indeksu: " + document.getElementById("nrindeksu").innerHTML)
 					}
@@ -215,7 +215,8 @@
 				</script>
 			</div>
 		</div>
- </section>
+		</div>
+ 	</section>
 
 
 	<section id="projekt2">
@@ -224,58 +225,46 @@
 				<h1>Projekt 2</h1>
 
 
-					<p id="firstQuestion"></p><input type="text" id="firstA" name="firstQ">
-					<p id="secondQuestion"></p><input type="text" id="secondA" name="secondQ">
-					<p id="thirdQuestion"></p><input type="text" id="thirdA" name="firstQ"><br><br>
-					<button onclick="quizResults()">Sprawdź</button>
-					<button type="button" value="Reload Page" onClick="document.location.reload(true)">Od nowa</button>
+				<p id="question0"></p><input type="text" id="0" name="firstQ">
+				<p id="question1"></p><input type="text" id="1" name="secondQ">
+				<p id="question2"></p><input type="text" id="2" name="thirdQ">
+				<p id="question3"></p><input type="text" id="3" name="fourthQ"><br><br>
+				<button onclick="quizResults()">Sprawdź</button>
+				<button type="button" value="Reload Page" onClick="document.location.reload(true)">Od nowa</button>
 
 
 				<script>
 					const questions = [
 						["W jakim roku byl chrzest Polski?", 966],
 						["Kiedy była bitwa pod Grunwaldem", 1410],
-						["Kiedy był pokój toruński?", 1411]
+						["Kiedy był pokój toruński?", 1411],
+						["W którym roku urodził się Damian Gul", 1999]
 					];
 
-					document.getElementById("firstQuestion").innerHTML = questions[0][0];
-					document.getElementById("secondQuestion").innerHTML = questions[1][0];
-					document.getElementById("thirdQuestion").innerHTML = questions[2][0];
+					for(let i = 0; i<questions.length; i++) {
+						document.getElementById('question' + i).innerHTML = questions[i][0];
+					}
 
 					function quizResults() {
-						let firstAnswer = document.getElementById("firstA").value;
-						let secondAnswer = document.getElementById("secondA").value;
-						let thirdAnswer = document.getElementById("thirdA").value;
+
+						let answers = [];
 						let score = 0;
-
-						if (firstAnswer == questions[0][1]) {
-							score++;
-							document.getElementById("firstQuestion").style.color = "green";
-						}
-						else {
-							document.getElementById("firstQuestion").style.color = "red";
+						for(let i = 0; i<questions.length; i++)
+						{
+							answers.push(document.getElementById('' + i + '').value);
 						}
 
-						if (secondAnswer == questions[1][1]) {
-							score++;
-							document.getElementById("secondQuestion").style.color = "green";
+						for(let i = 0; i<questions.length; i++)
+						{
+							if(answers[i] == questions[i][1]) {
+								score++;
+								document.getElementById('question' + i).style.color = "green";
+							}
+							else {
+								document.getElementById('question' + i).style.color = "red";
+							}
 						}
-						else {
-							document.getElementById("secondQuestion").style.color = "red";
-						}
-
-						if (thirdAnswer == questions[2][1]) {
-							score++;
-							document.getElementById("thirdQuestion").style.color = "green";
-						}
-						else {
-							document.getElementById("thirdQuestion").style.color = "red";
-						}
-
-						alert("Wynik z quizu: " + score);
-
-
-
+						alert("Wynik z quizu: " + score + "/" + questions.length);
 					}
 
 				</script>
@@ -291,7 +280,7 @@
 		</div>
 	</footer>
 
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+	<div class="modal fade" id="myModall" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
