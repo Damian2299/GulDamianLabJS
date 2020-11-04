@@ -18,28 +18,67 @@
 .pullquote {
     float: right;
     clear: right;
-    width: 200px;
-    padding: 10px;
-    font-size: 20px;
+    width: 150px;
+    padding: 8px;
+    font-size: 16px;
     background-color: rgba(255, 211, 224, 0.5);
-    border-radius: 10px;
     margin: 20px 0 10px 10px;
     font-style: italic;
 }
 
+#guzik1, #guzik2, #guzik3, #guzik4, #guzik5, #guzik6, #guzik7, #guzik8, #guzik9, #guzik10 {
+    margin: 2px 2px 2px 2px;
+}
+
 .pq {
-    width: 200px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
+    width: 280px;
     margin: 20px 0 10px 10px;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .styl1 {
-    color: red;
+    color:red;
 }
 
 .styl2 {
-    background-color: aqua;
+    background-color:aqua;
+}
+
+.styl3 {
+    font-size: 30px;
+}
+
+.styl4 {
+    background: linear-gradient(red, yellow); 
+}
+
+.styl5 {
+    background-color: mistyrose;
+    font-style: italic;
+}
+
+.styl6 {
+    background-color: skyblue;
+    color: yellow !important;
+    font-size: 20px;
+}
+
+.styl7 {
+    background-color: chartreuse;
+    font-size: 40px;
+    float: right;
+}
+
+.styl8 {
+    text-decoration: line-through;
+    color: purple;
+}
+
+.styl9 {
+    text-decoration: underline;
+    color: mediumslateblue !important;
+}
+
+.styl10 {
+    background-color: palegreen;
 }

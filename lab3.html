@@ -83,8 +83,6 @@
 			<div class="jumbotron">
 				<h1>Laboratorium3</h1>
 
-				<p id="message">Komunikat specjalny</p>
-
 				<script>
 					$(document).ready(function() {
 						$('span.pq').each(function() {
@@ -104,53 +102,107 @@
 						});
 
 						$('#guzik').click(function() {
-							$(this).val("Przycisk kliknięto!");
+							$(this).text("Zostałem kliknięty");
 						});
 
 						$('#guzik1').click(function() {
-							let message = "<p>Zmiana kolory załączników (a) na czerwony</p>";
+							let message = "<p>Zmiana koloru załączników na czerwony (znacznik a)</p>";
 							$('#mainLab3').append(message);
 
 							$('a').each(function() {
 								$(this).addClass('styl1');
-							});
-							
-							$(this).val("1 kliknięty");
+							});						
+							$(this).text("1 kliknięty");
 						});
 
 						$('#guzik2').click(function() {
-							let message = "<p>Zmiana koloru tła stopki (footer)</p>";
+							let message = "<p>Zmiana koloru tła akapitów (znacznik p)</p>";
 							$('#mainLab3').append(message);
 
-							$('footer').each(function() {
+							$('p').each(function() {
 								$(this).addClass('styl2');
 							});
+							$(this).text("2 kliknięty");
+						});
 
-							$(this).val("2 kliknięty");
-						});
 						$('#guzik3').click(function() {
-							$(this).val("3 kliknięty");
+							let message = "<p>Zmiana wielkości wszystkich załączników na stronie (znacznik a)</p>";
+							$('#mainLab3').append(message);
+
+							$('a').each(function() {
+								$(this).addClass('styl3');
+							});
+							$(this).text("3 kliknięty");
 						});
+
 						$('#guzik4').click(function() {
-							$(this).val("4 kliknięty");
+							let message = "<p>Zmiana tła w body (znacznik body)</p>";
+							$('#mainLab3').append(message);
+
+							$('body').each(function() {
+								$(this).addClass('styl4');
+							});
+							$(this).text("4 kliknięty");
 						});
+						
 						$('#guzik5').click(function() {
-							$(this).val("5 kliknięty");
+							let message = "<p>Zmiana koloru tła i pisma nagłówka (znacznik h1)</p>";
+							$('#mainLab3').append(message);
+
+							$('h1').each(function() {
+								$(this).addClass('styl5');
+							});
+							$(this).text("5 kliknięty");
 						});
+
 						$('#guzik6').click(function() {
-							$(this).val("6 kliknięty");
+							let message = "<p>Zmiana tła i wielkości czcionki w nawigacji (znacznik nav)</p>";
+							$('#mainLab3').append(message);
+
+							$('nav').each(function() {
+								$(this).addClass('styl6');
+							});
+							$(this).text("6 kliknięty");
 						});
+
 						$('#guzik7').click(function() {
-							$(this).val("7 kliknięty");
+							let message = "<p>Zmiana kolory tła stopki, wielkości i przesunięcie w prawo (znacznik footer)</p>";
+							$('#mainLab3').append(message);
+
+							$('footer > div > button').each(function() {
+								$(this).addClass('styl7');
+							});
+							$(this).text("7 kliknięty");
 						});
+
 						$('#guzik8').click(function() {
-							$(this).val("8 kliknięty");
+							let message = "<p>Zmiana koloru i przekreślenie akapitów w znacznikach section (znacznik p)</p>";
+							$('#mainLab3').append(message);
+
+							$('section > div > div > p').each(function() {
+								$(this).addClass('styl8');
+							});
+							$(this).text("8 kliknięty");
 						});
+
 						$('#guzik9').click(function() {
-							$(this).val("9 kliknięty");
+							let message = "<p>Podkreślenie i zmiana koloru nagłówka (znacznik h1)</p>";
+							$('#mainLab3').append(message);
+
+							$('section > div > div > h1').each(function() {
+								$(this).addClass('styl9');
+							});
+							$(this).text("9 kliknięty");
 						});
+
 						$('#guzik10').click(function() {
-							$(this).val("10 kliknięty");
+							let message = "<p>Zmiana koloru wnętrza znacznika section</p>";
+							$('#mainLab3').append(message);
+
+							$('section > div > div').each(function() {
+								$(this).addClass('styl10');
+							});
+							$(this).text("10 kliknięty");
 						});
 
 					});
@@ -163,12 +215,11 @@
 	<section id="Projekt X">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Laboratorium3</h1>
-
-				<p>Komunikat specjalny</p>
-				<span class="pq">Jestem Damian</span>
-				<p>Testowy znacznik p</p>
-				<span class="pq">Komunikat specjalny</span>
+				<p class="pq">"Nie chcę pod koniec życia stwierdzić, że przeżyłam tylko jego długość. Chcę przeżyć też pełną jego szerokość."</p>
+				<span class="pq">"Trzy rzeczy zostały z raju: gwiazdy, kwiaty i oczy dziecka."</span><br>
+				<span class="pq">"Jeśli idziesz przez piekło, nie zatrzymuj się."</span>
+				<p class="pq">"Życie po prostu jest. Trzeba płynąć wraz z nim."</p>
+				
 			</div>
 		</div>
 	</section>
@@ -186,17 +237,29 @@
 		<div class="container">
 			<div id="Projekt4Main" class="jumbotron">
 				<form >
-					<input id="guzik" type="submit" value="Send Request"><br>
-					<input id="guzik1" type="submit" value="1"><br>
-					<input id="guzik2" type="submit" value="2"><br>
-					<input id="guzik3" type="submit" value="3"><br>
-					<input id="guzik4" type="submit" value="4"><br>
-					<input id="guzik5" type="submit" value="5"><br>
-					<input id="guzik6" type="submit" value="6"><br>
-					<input id="guzik7" type="submit" value="7"><br>
-					<input id="guzik8" type="submit" value="8"><br>
-					<input id="guzik9" type="submit" value="9"><br>
-					<input id="guzik10" type="submit" value="10">
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+							data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik">Kliknij mnie!</button><br>
+
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">1</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">2</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">3</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">4</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">5</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">6</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">7</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">8</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">9</button><br>
+					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik10">10</button><br>
 				</form>
 			</div>
 		</div>
@@ -209,7 +272,7 @@
 		</div>
 	</footer>
 
-	<div class="modal fade" id="myModall" tabindex="-1" role="dialog"
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
