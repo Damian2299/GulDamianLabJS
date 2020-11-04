@@ -70,13 +70,134 @@
 
 	</nav>
 
-	<section id="quiz">
+	<section id="main">
+		<div class="container">
+			<div id="mainLab3" class="jumbotron">
+
+			</div>
+		</div>
+	</section>
+
+	<section id="Lab3">
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Laboratorium3</h1>
 
+				<p id="message">Komunikat specjalny</p>
 
+				<script>
+					$(document).ready(function() {
+						$('span.pq').each(function() {
+							var quote=$(this).clone();
+							quote.removeClass('pq');
+							quote.addClass('pullquote');
+							$(this).before(quote);
+						});
 
+						$('body').dblclick(function(){
+							alert("Wykryto podwójne kliknięcie!");
+						});
+
+						$('a').mouseover(function(){
+							let message = "<p>Wskazałeś na ten odnośnik myszką!</p>";
+							$('#Projekt3Main').append(message);
+						});
+
+						$('#guzik').click(function() {
+							$(this).val("Przycisk kliknięto!");
+						});
+
+						$('#guzik1').click(function() {
+							let message = "<p>Zmiana kolory załączników (a) na czerwony</p>";
+							$('#mainLab3').append(message);
+
+							$('a').each(function() {
+								$(this).addClass('styl1');
+							});
+							
+							$(this).val("1 kliknięty");
+						});
+
+						$('#guzik2').click(function() {
+							let message = "<p>Zmiana koloru tła stopki (footer)</p>";
+							$('#mainLab3').append(message);
+
+							$('footer').each(function() {
+								$(this).addClass('styl2');
+							});
+
+							$(this).val("2 kliknięty");
+						});
+						$('#guzik3').click(function() {
+							$(this).val("3 kliknięty");
+						});
+						$('#guzik4').click(function() {
+							$(this).val("4 kliknięty");
+						});
+						$('#guzik5').click(function() {
+							$(this).val("5 kliknięty");
+						});
+						$('#guzik6').click(function() {
+							$(this).val("6 kliknięty");
+						});
+						$('#guzik7').click(function() {
+							$(this).val("7 kliknięty");
+						});
+						$('#guzik8').click(function() {
+							$(this).val("8 kliknięty");
+						});
+						$('#guzik9').click(function() {
+							$(this).val("9 kliknięty");
+						});
+						$('#guzik10').click(function() {
+							$(this).val("10 kliknięty");
+						});
+
+					});
+				</script>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="Projekt X">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Laboratorium3</h1>
+
+				<p>Komunikat specjalny</p>
+				<span class="pq">Jestem Damian</span>
+				<p>Testowy znacznik p</p>
+				<span class="pq">Komunikat specjalny</span>
+			</div>
+		</div>
+	</section>
+
+	<section id="Projekt3">
+		<div class="container">
+			<div id="Projekt3Main" class="jumbotron">
+				<a href="#">Pierwszy odnośnik</a>
+				<a href="#">Drugi odnośnik</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="Projekt4">
+		<div class="container">
+			<div id="Projekt4Main" class="jumbotron">
+				<form >
+					<input id="guzik" type="submit" value="Send Request"><br>
+					<input id="guzik1" type="submit" value="1"><br>
+					<input id="guzik2" type="submit" value="2"><br>
+					<input id="guzik3" type="submit" value="3"><br>
+					<input id="guzik4" type="submit" value="4"><br>
+					<input id="guzik5" type="submit" value="5"><br>
+					<input id="guzik6" type="submit" value="6"><br>
+					<input id="guzik7" type="submit" value="7"><br>
+					<input id="guzik8" type="submit" value="8"><br>
+					<input id="guzik9" type="submit" value="9"><br>
+					<input id="guzik10" type="submit" value="10">
+				</form>
 			</div>
 		</div>
 	</section>
