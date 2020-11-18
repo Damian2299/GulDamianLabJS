@@ -91,7 +91,7 @@
                         <td>5321</td>
                         <td class="test">Damian</td>
                       </tr>
-                      <tr>
+                      <tr class="wiersz">
                         <th scope="row">2</th>
                         <td>Ludzie budują za dużo murów, a za mało mostów.</td>
                         <td>5125</td>
@@ -105,45 +105,45 @@
                       </tr>
                       <tr>
                         <th scope="row">4</th>
-                        <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
+                        <td class="poczatek">Nasze życie jest takim, jakim uczyniły je nasze myśli.</td>
                         <td>63476</td>
-                        <td class="poczatek">Animacje</td>
+                        <td>Animacje</td>
                       </tr>
                       <tr>
                         <th scope="row">5</th>
-                        <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
+                        <td>Sztuka życia – to cieszyć się małym szczęściem.</td>
                         <td>63476</td>
                         <td class="test">Animacje</td>
                       </tr>
-                      <tr>
+                      <tr class="wiersz">
                         <th scope="row">6</th>
-                        <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
+                        <td>Życie po prostu jest. Trzeba płynąć wraz z nim.</td>
                         <td>63476</td>
                         <td>Animacje</td>
                       </tr>
                       <tr>
                         <th scope="row">7</th>
-                        <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
-                        <td class="poczatek">63476</td>
+                        <td class="poczatek">Życie bez radości jest jak długa podróż bez gospody.</td>
+                        <td>63476</td>
                         <td class="test2">Animacje</td>
                       </tr>
-                      <tr>
+                      <tr class="wiersz">
                         <th scope="row">8</th>
                         <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
                         <td>63476</td>
-                        <td>Animacje</td>
+                        <td class="hiding" style="display: none;">Tajna wiadomość</td>
                       </tr>
                       <tr>
                         <th scope="row">9</th>
-                        <td>Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
+                        <td class="poczatek">Życie jest zbyt krótkie, żeby było małe.</td>
                         <td class="test2">63476</td>
-                        <td class="poczatek">Animacje</td>
+                        <td>Animacje</td>
                       </tr>
                       <tr>
                         <th scope="row">10</th>
-                        <td class="test2">Rób, co możesz, w miejscu, jakim jesteś i z tym, co masz.</td>
+                        <td class="test2">Przyjemność jest początkiem i celem życia szczęśliwego.</td>
                         <td>63476</td>
-                        <td class="poczatek">Animacje</td>
+                        <td><a href="#">Animacje</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -151,14 +151,16 @@
                   <script>
                         $(document).ready(function() {
                             let clicked1 = 0, clicked2 = 0, clicked3 = 0, clicked4 = 0
-                                clicked5 = 0, clicked6 = 0, clicked7 = 0, clicked8 = 0, clicked9 = 0, clicked10 = 0;
+                                clicked5 = 0, clicked6 = 0, clicked7 = 0, clicked8 = 0, clicked9 = 0, clicked10 = 0,
+                                clicked11 = 0, clicked12 = 0, clicked13 = 0, clicked14 = 0, clicked15 = 0, clicked16 = 0, 
+                                clicked17 = 0, clicked18 = 0;
 
                             $('#guzik1').click(function() {
                                 if(clicked1 == 0)
                                 {
                                     clicked1 = 1;
 
-                                    $("th:first-of-type").animate({'background-color':'yellow'}, 2500);
+                                    $("th:first-of-type").css("background-color", "yellow");
                                     $('#guzik1').css("background-color", "grey");
 
                                     
@@ -166,7 +168,7 @@
                                 else 
                                 {
                                     clicked1 = 0;
-                                    $("th:first-of-type").animate({'background-color':'transparent'});
+                                    $("th:first-of-type").css("background-color", "transparent");
                                     $('#guzik1').css("background-color", "#5bc0de");
                                 }
 
@@ -192,13 +194,13 @@
                                     {
                                         clicked3 = 1;
 
-                                        $("tbody > tr").animate({'font-size':'12px'}, 2000);
+                                        $("tbody > tr").animate({'fontSize':'12px'}, 2000);
                                         $('#guzik3').css("background-color", "grey");
                                     }
                                     else 
                                     {
                                         clicked3 = 0;
-                                        $("tbody > tr").animate({'font-size':'14px'}, 2000);
+                                        $("tbody > tr").animate({'fontSize':'14px'}, 2000);
                                         $('#guzik3').css("background-color", "#5bc0de");
                                     }
                             });
@@ -208,7 +210,7 @@
                                     {
                                         clicked4 = 1;
 
-                                        $('tbody').css("background-color", "yellow");
+                                        $('tbody').css("background-color", "orange");
                                         $('#guzik4').css("background-color", "grey");
                                     }
                                     else 
@@ -223,14 +225,14 @@
                                     if(clicked5 == 0)
                                     {
                                         clicked5 = 1;
-
-                                        $("th + td").css("text-decoration", "underline");
+                                        
+                                        $("th + td").animate({'letterSpacing':'+=2px'}, 2000);
                                         $('#guzik5').css("background-color", "grey");
                                     }
                                     else 
                                     {
                                         clicked5 = 0;
-                                        $("th + td").css("text-decoration", "none");
+                                        $("th + td").animate({'letterSpacing':'-=2px'}, 2000);
                                         $('#guzik5').css("background-color", "#5bc0de");
                                     }
                             });
@@ -256,13 +258,13 @@
                                     {
                                         clicked7 = 1;
 
-                                        $('td[class="test"]').css("color", "orange");
+                                        $('td[class="test"]').animate({'paddingTop': "+=20px"});
                                         $('#guzik7').css("background-color", "grey");
                                     }
                                     else 
                                     {
                                         clicked7 = 0;
-                                        $('td[class="test"]').css("color", "black");
+                                        $('td[class="test"]').animate({'paddingTop': "-=20px"});
                                         $('#guzik7').css("background-color", "#5bc0de");
                                     }
                             });
@@ -272,13 +274,13 @@
                                     {
                                         clicked8 = 1;
 
-                                        $('td[class^="te"]').css("font-weight", "bold");
+                                        $('td[class^="te"]').animate({'opacity': "0"});
                                         $('#guzik8').css("background-color", "grey");
                                     }
                                     else 
                                     {
                                         clicked8 = 0;
-                                        $('td[class^="te"]').css("font-weight", "normal");
+                                        $('td[class^="te"]').animate({'opacity': "1"});
                                         $('#guzik8').css("background-color", "#5bc0de");
                                     }
                             });
@@ -288,13 +290,13 @@
                                     {
                                         clicked9 = 1;
 
-                                        $('td[class$="tek"]').css("text-decoration", "line-through");
+                                        $('td[class$="tek"]').animate({'wordSpacing': "+=5px"});
                                         $('#guzik9').css("background-color", "grey");
                                     }
                                     else 
                                     {
                                         clicked9 = 0;
-                                        $('td[class$="tek"]').css("text-decoration", "none");
+                                        $('td[class$="tek"]').animate({'wordSpacing': "-=5px"});
                                         $('#guzik9').css("background-color", "#5bc0de");
                                     }
                             });
@@ -315,8 +317,135 @@
                                     }
                             });
 
+                            $('#guzik11').click(function() {
+                                    if(clicked11 == 0)
+                                    {
+                                        clicked11 = 1;
+
+                                        $("tr:even").fadeOut(3000);
+                                        $('#guzik11').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked11 = 0;
+                                        $("tr:even").fadeIn(3000);
+                                        $('#guzik11').css("background-color", "#5bc0de");
+                                    }
+                            });
                             
-                            
+                            $('#guzik12').click(function() {
+                                    if(clicked12 == 0)
+                                    {
+                                        clicked12 = 1;
+
+                                        $("tr:odd").animate({'opacity': "0"}, 3000);
+                                        $('#guzik12').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked12 = 0;
+                                        $("tr:odd").animate({'opacity': "1"}, 3000);
+                                        $('#guzik12').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik13').click(function() {
+                                    if(clicked13 == 0)
+                                    {
+                                        clicked13 = 1;
+
+                                        $("tr.wiersz:even").fadeOut(3000);
+                                        $('#guzik13').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked13 = 0;
+                                        $("tr.wiersz:even").fadeIn(3000);
+                                        $('#guzik13').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik14').click(function() {
+                                    if(clicked14 == 0)
+                                    {
+                                        clicked14 = 1;
+
+                                        $("tr:first").animate({'letterSpacing':'+=2px'}, 2000);
+                                        $("tr:last").animate({'letterSpacing':'+=2px'}, 2000);
+                                        $('#guzik14').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked14 = 0;
+                                        $("tr:first").animate({'letterSpacing':'-=2px'}, 2000);
+                                        $("tr:last").animate({'letterSpacing':'-=2px'}, 2000);
+                                        $('#guzik14').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik15').click(function() {
+                                    if(clicked15 == 0)
+                                    {
+                                        clicked15 = 1;
+
+                                        $('td:not(.test)').css("color", "green");
+                                        $('#guzik15').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked15 = 0;
+                                        $('td:not(.test)').css("color", "black");
+                                        $('#guzik15').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik16').click(function() {
+                                    if(clicked16 == 0)
+                                    {
+                                        clicked16 = 1;
+
+                                        $('td:has(a)').animate({'fontSize':'+=10px'}, 2000);
+                                        $('#guzik16').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked16 = 0;
+                                        $('td:has(a)').animate({'fontSize':'-=10px'}, 2000);
+                                        $('#guzik16').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik17').click(function() {
+                                    if(clicked17 == 0)
+                                    {
+                                        clicked17 = 1;
+
+                                        $('td:contains(5125)').css("text-decoration", "line-through");
+                                        $('#guzik17').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked17 = 0;
+                                        $('td:contains(5125)').css("text-decoration", "none");
+                                        $('#guzik17').css("background-color", "#5bc0de");
+                                    }
+                            });
+
+                            $('#guzik18').click(function() {
+                                    if(clicked18 == 0)
+                                    {
+                                        clicked18 = 1;
+
+                                        $('td:hidden').show();
+                                        $('#guzik18').css("background-color", "grey");
+                                    }
+                                    else 
+                                    {
+                                        clicked18 = 0;
+                                        $('td.hiding').hide();
+                                        $('#guzik18').css("background-color", "#5bc0de");
+                                    }
+                            });
                         });
                   </script>
 				
@@ -331,21 +460,21 @@
                 <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
 						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">Pierwsza kolumna zostanie pomalowana</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Nieparzyste wiersze zmieniają font-weight na bold</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Nieparzyste wiersze znikają</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
 						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">Zmiana font-size wierszy na mniejszy</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Zmiana tła tabeli na żółty</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Zmiana tła tabeli na pomarańczowy</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Podkreślenie tekstu w znaczniku td, który znajduję się za th</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Zwiększenie letter spacing w drugiej kolumnie</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
 						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">Kolorują się słowa z atrybutem class</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Kolorują się słowa z atrybutem class="test"</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Zwiększa się padding-top elementom z atrybutem class="test"</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Zmieni się grubość słowa z atrybutem class z początkiem "te"</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Znikną słowa z atrybutem class z początkiem "te"</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Skreślenie słów z atrybutem class, który ma końcówke "tek"</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Zwiększenie word-spacing między słowami z atrybutem class, który ma końcówke "tek"</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
 						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik10">Zmiana czcionki słów z atrybutem class, który ma ciąg znaków "te"</button><br>
 				
@@ -358,21 +487,21 @@
 			<div class="jumbotron">
 
                 <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik11">Pierwsza kolumna zostanie pomalowana</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik11">Znikają parzyste wiersze</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik12">Nieparzyste wiersze zmieniają font-weight na bold</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik12">Nieparzyste wiersze znikają przez opacity</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik13">Zmiana font-style wierszy na kursywe</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik13">Parzyste wiersze z klasą wiersz znikają</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik14">Zmiana tła tabeli na żółty</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik14">Zwiększenie letter-spacing w pierwszym i ostatnim wierszu</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik15">Podkreślenie tekstu w znaczniku td, który znajduję się za th</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik15">Pomalowanie na zielono słów, które nie mają klasy "test"</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik16">Kolorują się słowa z atrybutem class</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik16">Wszystkim znacznikom td, które mają wewnątrz znacznik "a", powiększy się czcionka</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik17">Kolorują się słowa z atrybutem class="test"</button><br>
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik17">Skreślenie komórek które zawierają tekst "5125"</button><br>
 					<button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
-						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik18">Zmieni się grubość słowa z atrybutem class z początkiem "te"</button><br>			
+						data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik18">Ukazanie się ukrytego wiersza!</button><br>			
 			</div>
 		</div>
 	</section>
